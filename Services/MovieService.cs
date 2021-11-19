@@ -34,6 +34,11 @@ namespace movie.Services
         }
         }
 
+        public Task<(bool IsSuccess, Exception Exception)> CreateAsync(Image image)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<(bool IsSuccess, Exception Exception)> DeleteAsync(Guid id)
         {
 

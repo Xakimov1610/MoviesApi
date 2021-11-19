@@ -9,19 +9,18 @@ namespace movie.Entities
         public Guid Id { get; set; }
 
         [Required]
-        public Byte[] Data { get; set; }
+        public byte[] Data { get; set; }
         public Guid MovieId { get; set; }
 
-        public DateTimeOffset ReleaseDate { get; set; }
-
-        public Image(Guid MoviId);
-
-        public Image(Guid id, DateTimeOffset releaseDate)
+        public Image(byte[] data, Guid movieId)
         {
-            this.Id = id;
-            this.ReleaseDate = releaseDate;
+            Id = Guid.NewGuid();
+            Data = data;
+            MovieId = movieId;
 
         }
 
+        [Obsolete("Used only for Entities binding.", true)]
+        public Image() {}
     }
 }

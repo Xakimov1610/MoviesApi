@@ -15,5 +15,7 @@ namespace movie.Services
         Task<bool> ExistsAsync(Guid id);
         Task<(bool IsSuccess, Exception Exception, Movie Movie)> UpdateAsync(Movie movie);
         Task<(bool IsSuccess, Exception Exception)> DeleteAsync(Guid id);
+
+        Task<(bool IsSuccess, Exception Exception)> CreateAsync(Image image);
     }
 }
