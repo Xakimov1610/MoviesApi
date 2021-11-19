@@ -23,7 +23,7 @@ namespace movie
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MoviesDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("MoviesConnection")));
+                options.UseSqlServer(Configuration?.GetConnectionString("MoviesConnection")));
 
             services.AddTransient<IGenreService, GenreService>();
             services.AddTransient<IActorService, ActorService>();
