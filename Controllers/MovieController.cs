@@ -103,13 +103,10 @@ namespace movie.Controllers
 
         return BadRequest(insertResult.Exception.Message);
       }
-
-    [HttpDelete]
-    [Route("{Id}")]
-    public async Task<IActionResult> Delete([FromRoute]Guid Id)
-     =>Ok(await _ms.DeleteAsync(Id));
-
-
-     
-  }
+      
+        [HttpDelete]
+        [Route("{Id}")]
+        public async Task<IActionResult> Delete([FromRoute]Guid Id)
+        =>Ok(await _ms.DeleteAsync(Id));
+      }
 }

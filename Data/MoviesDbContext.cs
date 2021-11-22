@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using movie.Entities;
+using MoviesApi.Entities;
 
 namespace movie.Data
 {
@@ -8,7 +9,7 @@ namespace movie.Data
         public DbSet<Movie> Movies { get; set;}
         public DbSet<Actor> Actors { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Image> Images { get; set; }
+        public DbSet<EnFormFile> Files { get; set; }
         
         
 
